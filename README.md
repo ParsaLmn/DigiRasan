@@ -1,2 +1,2 @@
 # DigiRasan
-DigiRasan Mobile Template
+DigiRasan Mobile First Template
