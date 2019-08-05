@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+	<title>Home Page</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="./Style/MobileStyle.css">
+	<link rel="stylesheet" href="./Style/Color.css">
+	<link href="./dist/css/font-awesome.css" rel="stylesheet" type="text/css" />
+	<link href="./dist/css/tiFontIcon.css" rel="stylesheet" type="text/css" />
+	<script src="./Jquery-3.3.1/jquery-3.3.1.js"></script>
+	<script src="./jquery.mobile-1.4.5/jquery.mobile-1.4.5.js"></script>
+	<script src="./jquery.mobile-1.4.5/jquery.mobile-1.5.0-alpha.1.min.js"></script>
+	<script src="./bootstrap-4.1.3/js/bootstrap.js"></script>
+	<script src="./js/Action.js"></script>
+	<script src="./js/slider.js"></script>
+	<link rel="stylesheet" href="./Style/treeview.css">
+</head>
+
+<body dir="rtl" onresize="menuToggler()">
+	<!-- the navigation part  -->
+	<div>
+		<!-- the drop down menu -->
+		<div id="topnav" class="d-flex bg-light flex-column justify-content-end fixed-top" style="height: 55px;">
+			<div class="container flex-grow-1" style="overflow-y: scroll">
+				<!-- start profile -->
+				<div class="row mt-2">
+					<!-- start profile picture -->
+					<div class="col-4">
+						<img src="./img/avatar5.png" class="rounded-circle img-thumbnail" width="90px" alt="">
+					</div>
+					<!-- end profile picture -->
+					<div class="col-7 d-flex flex-column align-items-center justify-content-around">
+						<div>پارسا لاریمیان</div> <!-- name of the user -->
+						<div class="wrap-solve">
+							<!-- for edit profile btn -->
+							<button type="button" class="btn bg-transparent border-info rounded shadow hover-bg-1 hover-text-3  w-50">ویرایش</button>
+							<!-- end edit profile btn -->
+							<!-- for exit btn -->
+							<button type="button" class="btn bg-transparent border-info rounded shadow hover-bg-1 hover-text-3  w-50">خروج
+							</button>
+							<!-- end exit btn -->
+						</div>
+					</div>
+				</div>
+				<!-- end profile -->
+				<hr>
+				<!-- start tree view menu -->
+
+				<div>
+					<ul id="myUL">
+						<li class="mt-2 py-1 d-flex px-0">
+							<a href="Profile.html" class="cursor-pointer hover-bg-4 hover-text-3 rounded p-1 w-100">گزارش کمپین ها</a>
+						</li>
+						<li class="p-0  hover-bg-4 hover-text-3 rounded">
+							<div onclick="rotate(this)" class="d-flex justify-content-between caret p-1">
+								گزارش مالی
+								<i class="fa fa-angle-left float-left pl-1" style=""></i>
+							</div>
+							<ul class="nested bg-light">
+								<li class="py-1 d-flex"><a class="w-100 hover-bg-2 hover-text-3 p-1 rounded" href="">گزارش مالی 1</a></li>
+								<li class="py-1 d-flex"><a class="w-100 hover-bg-2 hover-text-3 p-1 rounded" href="">گزارش مالی 2</a></li>
+							</ul>
+						</li>
+						<li class="p-0  hover-bg-4 hover-text-3 rounded">
+							<div onclick="rotate(this)" class="d-flex justify-content-between caret p-1">
+								تنظیمات
+								<i class="fa fa-angle-left float-left pl-1" style=""></i>
+							</div>
+							<ul class="nested bg-light">
+								<li class="py-1 d-flex"><a class="w-100 hover-bg-2 hover-text-3 p-1 rounded" href="">افزودن پیج</a></li>
+								<li class="py-1 d-flex"><a class="w-100 hover-bg-2 hover-text-3 p-1 rounded" href="">ربات تلگرام</a></li>
+								<li class="py-1 d-flex"><a class="w-100 hover-bg-2 hover-text-3 p-1 rounded" href="">حساب بانکی</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<!-- end tree view menu -->
+			</div>
+			<nav class="navbar-expand-sm p-2 border-b-1">
+				<div class="row nowrap">
+					<!-- for the drop down btn -->
+					<div id="aplication" class="cursor-pointer col-1 d-flex">
+						<a class="m-auto">
+							<i class="fa fa-align-justify"></i>
+						</a>
+					</div>
+					<!-- end for the drop down btn -->
+					<!-- for the logo part -->
+					<div class="col-9">
+						<div class="row">
+							<a class="mx-auto navbar-brand text-dark" href="#">
+								<b>
+									Digi<span class="text-danger">Rasan</span>
+								</b>
+							</a>
+						</div>
+					</div>
+					<!-- end for the logo part -->
+					<!-- for the help icon -->
+					<div class="pl-1 d-none">
+						<a class="text-warning m-auto" href="#">
+							<i class="fa fa-question-circle fa-2x"></i>
+						</a>
+					</div>
+					<!-- end for the help icon -->
+				</div>
+			</nav>
+		</div>
+		<!-- end the drop down menu -->
+		<!-- start the footer part -->
+		<nav class="navbar bg-light fixed-bottom border-t-1">
+			<div class="container">
+				<!-- profile page -->
+				<a class="text-secondary" href="./Profile.html">
+					<i class="ti-Line-Person fa-2x"></i>
+				</a>
+				<!-- end profile page -->
+				<!-- notification page -->
+				<a class="text-secondary" href="./Notification.html">
+					<div style="position: relative">
+						<i class="fa fa-bell-o fa-2x"></i>
+						<span style="position: absolute;top: 0;left: 40%" class="badge badge-warning">10</span>
+					</div>
+				</a>
+				<!-- end notification page -->
+				<!-- help page -->
+				<a class="text-warning" href="#">
+					<i class="fa fa-question-circle fa-2x"></i>
+				</a>
+				<!-- end help page -->
+				<!-- calender page -->
+				<a class="text-secondary" href="#">
+					<i class="ti-Line-Calendar-2 fa-2x"></i>
+				</a>
+				<!-- end calender page -->
+				<!-- home dashboard page -->
+				<a class="text-secondary" href="/HomeDashboard.html">
+					<i class="ti-Line-Home fa-2x"></i>
+				</a>
+				<!-- end home dashboard page -->
+			</div>
+		</nav>
+		<!-- end the footer part -->
+	</div>
+	<!-- end navigation part -->
+	<div style="clear: both;height: 60px;"></div> <!-- this is for spacing the navigation and body -->
+	<!-- start mainBody -->
+	<div id="mainBody" class="container flex-column d-flex ">
+		<!-- start caompain information -->
+		<div class="my-3 rounded">
+			<div class="row mb-2">
+				<div class="col d-flex flex-row justify-content-around align-items-center">
+					<!-- coments part -->
+					<div class="d-flex flex-column align-items-center">
+						<div>4</div><!-- the number of coments -->
+						<div class="sz-7">کامنت</div>
+					</div>
+					<!-- end coments part -->
+					<!-- likes parts -->
+					<div class="d-flex flex-column align-items-center">
+						<div>3</div><!-- the number of likes -->
+						<div class="sz-7">لایک</div>
+					</div>
+					<!-- end likes part -->
+					<!-- participation percebt part -->
+					<div class="d-flex flex-column align-items-center">
+						<div>2</div><!-- the percent -->
+						<div class="sz-7">درصد مشارکت</div>
+					</div>
+					<!-- end participation percent part -->
+				</div>
+			</div>
+			<div class="d-flex pt-4">
+				<!-- start title of campaign -->
+				<div class="col d-flex flex-column justify-content-center align-items-baseline">
+					<h6>نخ دندان ارکید</h6><!-- the title -->
+				</div>
+				<!-- end title of campaign -->
+			</div>
+		</div>
+		<!-- end campaign information -->
+		<div class="container">
+			<!-- campaign details btn part -->
+			<div class="row mt-3">
+				<button type="button" class="btn bg-light rounded w-100">مشخصات کمپین
+				</button><!-- campaign details btn -->
+			</div>
+			<!-- end campaign details part -->
+			<!-- campaign analysis part -->
+			<div class="row mt-1">
+				<button type="button" class="btn bg-light rounded w-100" onclick="showModal()">تحلیل کمپین
+				</button><!-- campaign analysis btn -->
+			</div>
+			<!-- end campaign analysis part -->
+		</div>
+		<!-- statrt campaign details body -->
+		<div id="" class="my-3">
+			<!-- start campaign description part -->
+			<div class="bg-light p-3 text-right rounded">
+				<!-- text of description -->
+				<div class="content hideContent">
+					<p class="py-2 text-justify sz-8"> که مخفف user interface می باشد در فیلد اثر متقابل ماشین و انسان در صنعت طراحی، فضایی می باشد که اثر متقابل بین انسان و ماشین به وجود می آید. هدف این اثر متقابل اجازه برای عمل کرد موثر و کنترل ماشین از سمت انسان می باشد، در حالیکه ماشین اطلاعاتی را باز می گرداند </p>
+				</div>
+				<!-- show more & show less text -->
+				<div class="show-more">
+					<a class="text-secondary sz-8 cursor-pointer">بیشتر...</a>
+				</div>
+			</div>
+			<!-- end campaign description part -->
+			<!-- start campaign content part -->
+			<div class="mt-3 pt-3 pb-4 bg-light rounded">
+				<div class="container" dir="ltr">
+					<section id="slider" role="slider" class='bg-17'>
+						<div tag='image' class='w-100 box'>
+							<div class='w-100'>
+								<img class='w-100 img-fluid' src='./img/01.jpg'>
+							</div>
+							<div class='w-100'>
+								<img class='w-100 img-fluid' src='./img/02.jpg'>
+							</div>
+							<div class='w-100'>
+								<video class="w-100" controls>
+									<source src="/img/p3hdTggYmdBWrf-F.mp4" type="video/mp4">
+									Your browser does not support the video tag.
+								</video>
+							</div>
+						</div>
+						<div role='Pointer' class='pt-2 d-flex flex-row justify-content-center'>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- end campaign content part -->
+			<!-- campaign coments part -->
+			<div class="mt-3">
+				<div class="border-1 rounded w-100 text-right my-2">
+					<!-- header of ul -->
+					<header class="p-2 pr-3 bg-light border-b-1 d-flex flex-row justify-content-between">
+						<div class="d-flex align-items-center">
+							کامنت ها
+						</div>
+						<!-- see all coments btn -->
+						<div>
+							<button type="button" class="p-1 btn bg-white border-info rounded">مشاهده همه</button>
+						</div>
+						<!-- end see all coments btn -->
+					</header>
+					<!-- end header of ul -->
+					<!-- start list of top 5 coments -->
+					<ul id="comment" class="listStyle-none">
+						<li class="py-1 border-t-1">
+							<p class=" m-0">گواهینامه SSL Free Standard SSL Certificate</p>
+							<small class="sz-7">در ساعت 21:30 و تاریخ 97.01.01
+							</small>
+						</li>
+						<li class="py-1 border-t-1">
+							<p class=" m-0">گواهینامه SSL Free Standard SSL Certificate</p>
+							<small class="sz-7">در ساعت 21:30 و تاریخ 97.01.01
+							</small>
+						</li>
+						<li class="py-1 border-t-1">
+							<p class=" m-0">گواهینامه SSL Free Standard SSL Certificate</p>
+							<small class="sz-7">در ساعت 21:30 و تاریخ 97.01.01
+							</small>
+						</li>
+						<li class="py-1 border-t-1">
+							<p class=" m-0">گواهینامه SSL Free Standard SSL Certificate</p>
+							<small class="sz-7">در ساعت 21:30 و تاریخ 97.01.01
+							</small>
+						</li>
+						<li class="py-1 border-t-1">
+							<p class=" m-0">گواهینامه SSL Free Standard SSL Certificate</p>
+							<small class="sz-7">در ساعت 21:30 و تاریخ 97.01.01
+							</small>
+						</li>
+					</ul>
+					<!-- end list of top 5 coments -->
+				</div>
+			</div>
+			<!-- end campaign coments part -->
+			<!-- start pages part -->
+			<div class="mt-3">
+				<div class="border-1 rounded w-100 text-right my-2">
+					<!-- ul header -->
+					<header class="p-2 pr-3 bg-light border-b-1 d-flex flex-row justify-content-between">
+						<div class="d-flex align-items-center">
+							پیج ها
+						</div>
+						<div>
+							<!-- btn for see all pages with modal -->
+							<button type="button" class="p-1 btn bg-white border-info rounded">مشاهده همه</button>
+						</div>
+					</header>
+					<!-- end ul header -->
+					<!-- list of top 5 pages -->
+					<ul id="page" class="listStyle-none">
+						<!-- list of each page -->
+						<li class="mt-3 py-3 border-b-1">
+							<div class="row">
+								<!-- picture of the page -->
+								<div class="col-3">
+									<img src="./img/avatar5.png" width="" class="rounded-circle img-thumbnail" alt="">
+								</div>
+								<!-- end picture of the page -->
+								<div class="col-9 d-flex flex-row justify-content-around align-items-center">
+									<!-- coments of each page -->
+									<div class="d-flex flex-column align-items-center">
+										<div>14</div><!-- coments number of each page -->
+										<div class="sz-7">کامنت</div>
+									</div>
+									<!-- end coments -->
+									<!-- likes of each page -->
+									<div class="d-flex flex-column align-items-center">
+										<div>23</div><!-- likes number of each page -->
+										<div class="sz-7">لایک</div>
+									</div>
+									<div class="d-flex flex-column align-items-center">
+										<div>10</div><!-- participation percent of each page -->
+										<div class="sz-7">درصد مشارکت</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12 col-sm-6 d-flex flex-column justify-content-center align-items-center">
+									<h6>@Aparat</h6>
+								</div>
+								<div class="col-12 col-sm-6 d-flex flex-column justify-content-center align-items-center">
+									<button type="button" class="btn bg-transparent border-info rounded shadow hover-bg-1 hover-text-3 sz-8 w-75">مشاهده</button>
+								</div>
+							</div>
+						</li>
+						<!-- end list of each page -->
+						<!-- list of each page -->
+						<li class="mt-3 py-3 border-b-1">
+							<div class="row">
+								<!-- picture of the page -->
+								<div class="col-3">
+									<img src="./img/avatar5.png" width="" class="rounded-circle img-thumbnail" alt="">
+								</div>
+								<!-- end picture of the page -->
+								<div class="col-9 d-flex flex-row justify-content-around align-items-center">
+									<!-- coments of each page -->
+									<div class="d-flex flex-column align-items-center">
+										<div>14</div><!-- coments number of each page -->
+										<div class="sz-7">کامنت</div>
+									</div>
+									<!-- end coments -->
+									<!-- likes of each page -->
+									<div class="d-flex flex-column align-items-center">
+										<div>23</div><!-- likes number of each page -->
+										<div class="sz-7">لایک</div>
+									</div>
+									<div class="d-flex flex-column align-items-center">
+										<div>10</div><!-- participation percent of each page -->
+										<div class="sz-7">درصد مشارکت</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12 col-sm-6 d-flex flex-column justify-content-center align-items-center">
+									<h6>@Aparat</h6>
+								</div>
+								<div class="col-12 col-sm-6 d-flex flex-column justify-content-center align-items-center">
+									<button type="button" class="btn bg-transparent border-info rounded shadow hover-bg-1 hover-text-3 sz-8 w-75">مشاهده</button>
+								</div>
+							</div>
+						</li>
+						<!-- end list of each page -->
+					</ul>
+					<!-- end list of top 5 pages -->
+				</div>
+			</div>
+			<!-- end pages part -->
+		</div>
+		<!-- end campaign details body -->
+	</div>
+	<!-- End mainBody -->
+	<div style="clear: both;height: 60px;"></div> <!-- this is for spacing the navigation and body -->
+
+
+	<!-- for modal-->
+	<div id="modal" class="d-flex flex-column justify-content-end bg-white">
+		<!-- start modal body -->
+		<div id="modalBody" class="container flex-grow-1 d-flex flex-column justify-content-center" style="overflow-y: scroll">
+			<div class="alert alert-danger text-justify">
+				<strong>توجه!</strong> <br> کمپین شما بنا به دلایلی کنسل شد. برای اطلاعات بیشتر به فلان مراجعه کنید.
+			</div>
+		</div>
+		<!-- end of modal body -->
+		<!-- footer of modal -->
+		<div class="navbar-expand-sm p-2 border-t-1">
+			<div class="row nowrap">
+				<!-- start logo -->
+				<div class="col-10">
+					<div class="row">
+						<a class="mx-auto navbar-brand text-dark" href="#">
+							<b>
+								Digi<span class="text-danger">Rasan</span>
+							</b>
+						</a>
+					</div>
+				</div>
+				<!-- end logo -->
+				<!-- btn for closeing modal -->
+				<div class="cursor-pointer col-1 d-flex">
+					<a class="m-auto" style="cursor: pointer" onclick="closeModal()">
+						<i class="fa fa-times fa-2x hover-text-1"></i>
+					</a>
+				</div>
+				<!-- end btn for closing modal -->
+			</div>
+		</div>
+		<!-- end footer of modal -->
+	</div>
+	<!-- End for modal -->
+
+	<!-- for treeview -->
+	<script>
+		var toggler = document.getElementsByClassName("caret");
+		var i;
+
+		for (i = 0; i < toggler.length; i++) {
+			toggler[i].addEventListener("click", function() {
+				this.parentElement.querySelector(".nested").classList.toggle("open");
+				this.classList.toggle("caret-down");
+			});
+		}
+	</script>
+	<!-- end for treeview -->
+	<!-- for show more & less btn -->
+	<script>
+		$(".show-more a").on("click", function() {
+			var $this = $(this); /* the show more btn */
+			var $content = $this.parent().prev("div.content"); /* the div that has the texts in it */
+			var $paragraph = $content.children(); /*the paragraph that has the texts*/
+			var linkText = $this.text(); /* text of the show more btn */
+			if (linkText === "بیشتر...") //if open then close 
+			{
+				linkText = "کمتر...";
+				$content.height($paragraph.innerHeight()); /*increase the height of the div*/
+			} else //if close then open
+			{
+				linkText = "بیشتر...";
+				$content.height("2rem"); /*decrease the height of the div*/
+			};
+
+			$this.text(linkText);
+		});
+	</script>
+	<!-- end for show more & less btn -->
+	<!-- for swiping content -->
+	<script>
+		$(function() {
+			// Bind the swipeleftHandler callback function to the swipe event on div.box
+			$("div.box").on("swipeleft", swipeleftHandler);
+		});
+		$(function() {
+			// Bind the swiperightHandler callback function to the swipe event on div.box
+			$("div.box").on("swiperight", swiperightHandler);
+		});
+	</script>
+	<!-- end swiping content -->
+</body>
+
+</html>

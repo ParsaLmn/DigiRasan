@@ -1,0 +1,36 @@
+.activeCalendarCell{
+            border:2px solid #dc3545 !important;
+           border-radius:10%; 
+            }
+
+        .fontsz{
+            /* this class for cell font size */
+            font-size:1.2rem !important;
+            
+            }
+        .iconsz{
+            /* class for icon size  */
+            font-size:1rem !important;
+            }
+        .hederfontsz{
+            font-size:.9rem !important;
+            }
+        .cell{
+            margin:1px;
+        }
+         @media (max-width: 576px) {
+        .fontsz{
+            /* this class for cell font size */
+            font-size:1rem !important;            
+            }
+        .iconsz{
+            /* class for icon size  */
+            font-size:1rem !important;
+            }
+         .hederfontsz{
+            font-size:.9rem !important;
+            }
+ 
+         }
+
+
